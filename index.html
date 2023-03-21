@@ -1,25 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
     <title>Today'sCalender</title>
     <link rel="stylesheet" href="static/css/style.css">
+    <link rel="stylesheet" href="static/css/timePopup.css">
 </head>
 <body>
     <main>
         <h1>Today's Calender</h1>
-        <div class="list">
-            <article class="todo-tab">
-                <div class="move"></div>
-                <div class="title"></div>
-                <div class="date-start"></div>
-                <div class="date-end"></div>
-            </article>
-        </div>
+        <table>
+            <tbody id="tableBody">
+                <tr>
+                    <th>MOVE</th>
+                    <th>TITLE</th>
+                    <th>Description</th>
+                    <th>FROM</th>
+                    <th>TO</th>
+                </tr>
+                <tr id="0">
+                    <td class="move"></td>
+                    <td contenteditable="true" class="title"></td>
+                    <td contenteditable="true" class="desc"></td>
+                    <td class="startTime"></td>
+                    <td class="toTime"></td>
+                </tr>
+            </tbody>
+        </table>
         <div>
             <button id="add">Add</button>
         </div>
     </main>
-    <script src="static/js/script.js"></script>
+    <script src="static/js/tableScript.js"></script>
+    <script src="static/js/timeAPI.js"></script>
 </body>
 </html>
