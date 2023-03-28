@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
     <title>Today'sCalender</title>
-    <link rel="stylesheet" href="static/css/style.css">
-    <link rel="stylesheet" href="static/css/timePopup.css">
+    <link rel="stylesheet" href="static/css/style.css" >
+    <link rel="stylesheet" href="static/css/moduleStyle.css">
 </head>
 <body>
     <main>
@@ -15,15 +15,15 @@
                     <th>MOVE</th>
                     <th>TITLE</th>
                     <th>Description</th>
-                    <th>FROM</th>
-                    <th>TO</th>
+                    <th>START</th>
+                    <th>END</th>
                 </tr>
                 <tr id="0">
                     <td class="move"></td>
                     <td contenteditable="true" class="title"></td>
                     <td contenteditable="true" class="desc"></td>
-                    <td class="startTime"></td>
-                    <td class="toTime"></td>
+                    <td class="startTime" id="modalStartAccess"></td>
+                    <td class="endTime" id="modalEndAccess"></td>
                 </tr>
             </tbody>
         </table>
@@ -31,7 +31,22 @@
             <button id="add">Add</button>
         </div>
     </main>
+    <!-- Structure for modal. Dynamically changes -->
+    <div id="modal">
+        <div class="modal-content">
+            <section class="hour">
+                <img src="" alt="">
+                <p>This is a test</p>
+                <img src="" alt="">
+            </section>
+            <section class="minute">
+                <img src="" alt="">
+                <p>This is a test</p>
+                <img src="" alt="">
+            </section>
+        </div>
+    </div>
     <script src="static/js/tableScript.js"></script>
-    <script src="static/js/timeAPI.js"></script>
+    <script src="static/js/modal.js"></script>
 </body>
 </html>

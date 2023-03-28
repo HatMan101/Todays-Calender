@@ -1,24 +1,19 @@
 const addButton = document.getElementById("add");
-const cell = ["move", "title", "desc", "startTime", "toTime"];
+let node = document.getElementById("0");
 
 let idValue = "0";
 
+
 function rowFunction() {
-    // Creates a new row and ads appropriate ID
-    let rowElement = document.createElement("tr");
-    rowElement.setAttribute("id", idValue);
-    document.getElementById("tableBody").appendChild(rowElement);
-
-    // Loops through all cellElements used
-    for (let i = 0; i < cell.length; i++) {
-        let cellElement = document.createElement("td");
-
-        // If cell 1 or 2 is selected, make cell editable
-        if (i === 1 || i === 2) { cellElement.contentEditable = "true"; }
-        cellElement.classList.add(cell[i]);
-        rowElement.appendChild(cellElement);
-    }
+    const clone = node.cloneNode(true);
+    clone.setAttribute("id", idValue);
+    document.getElementById("tableBody").appendChild(clone);
 }
+
+window.addEventListener("load", () => {
+    const clone = modal.cloneNode(true);
+    document.getElementById("modalStartAccess").appendChild(clone);
+})
 
 addButton.addEventListener("click", () => {
     idValue++;
