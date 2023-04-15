@@ -1,0 +1,44 @@
+html body td, html body th {
+  border: 1px solid #d2d2d2;
+  text-align: left;
+  padding: 8px;
+}
+html body tr:nth-child(even) {
+  background-color: #848484;
+}
+html body #modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+html body #modal .modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  max-width: 600px;
+  width: 80%;
+  display: flex;
+  justify-content: space-evenly;
+  text-align: center;
+}
+html body #modal .modal-content section {
+  display: inline-block;
+}
+html body #modal .modal-content section p {
+  font-size: 80px;
+  margin: 0;
+}
+html body #modal .modal-content section img {
+  width: 140px;
+  height: auto;
+}
+
+/*# sourceMappingURL=style.css.map */
